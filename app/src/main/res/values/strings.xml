@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Inventory App</string>
+    <string name="action_insert_test_data">Insert Test Database Entry</string>
+    <string name="action_delete_all_db_entries">Delete All Items</string>
+</resources>
