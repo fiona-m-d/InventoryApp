@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,11 +27,17 @@ import com.example.android.inventoryapp.Data.InventoryContract.InventoryEntry;
 public class MainActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
+    //Variable for tracking quantity
+    private int quantity;
+
     //Identifier for the inventory data loader
     private static final int INVENTORY_LOADER = 0;
 
-    /** Adapter for the ListView */
+    //Adapter for the ListView
     InventoryCursorAdapter mCursorAdapter;
+
+    //Content URI for the existing item (null if it's a new entry)
+    private Uri mCurrentItemUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

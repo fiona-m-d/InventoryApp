@@ -70,20 +70,6 @@ public class EditorActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
 
-        // Find all relevant views for reading user input
-        mNameEditText = (EditText) findViewById(R.id.edit_name);
-        mPriceEditText = (EditText) findViewById(R.id.edit_price);
-        mQuantityEditText = (EditText) findViewById(R.id.edit_quantity);
-        mSupplierEditText = (EditText) findViewById(R.id.edit_supplier);
-        mSupplierEditText = (EditText) findViewById(R.id.edit_phone);
-
-        // Setup OnTouchListeners on all input fields, to determine if they've been tapped by user
-        mNameEditText.setOnTouchListener(mTouchListener);
-        mPriceEditText.setOnTouchListener(mTouchListener);
-        mQuantityEditText.setOnTouchListener(mTouchListener);
-        mSupplierEditText.setOnTouchListener(mTouchListener);
-        mSupplierEditText.setOnTouchListener(mTouchListener);
-
         // Determine from intent used to launch activity whether adding or editing an item
         Intent intent = getIntent();
         mCurrentItemUri = intent.getData();
@@ -102,6 +88,20 @@ public class EditorActivity extends AppCompatActivity implements
             // Initialize a loader to read data from the database and display the current values
             getLoaderManager().initLoader(EXISTING_ITEM_LOADER, null, this);
         }
+
+        // Find all relevant views for reading user input
+        mNameEditText = (EditText) findViewById(R.id.edit_name);
+        mPriceEditText = (EditText) findViewById(R.id.edit_price);
+        mQuantityEditText = (EditText) findViewById(R.id.edit_quantity);
+        mSupplierEditText = (EditText) findViewById(R.id.edit_supplier);
+        mPhoneEditText = (EditText) findViewById(R.id.edit_phone);
+
+        // Setup OnTouchListeners on all input fields, to determine if they've been tapped by user
+        mNameEditText.setOnTouchListener(mTouchListener);
+        mPriceEditText.setOnTouchListener(mTouchListener);
+        mQuantityEditText.setOnTouchListener(mTouchListener);
+        mSupplierEditText.setOnTouchListener(mTouchListener);
+        mPhoneEditText.setOnTouchListener(mTouchListener);
 
     }
 

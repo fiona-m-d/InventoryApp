@@ -17,7 +17,7 @@
     <string name="action_delete_all_entries">Delete All Entries</string>
 
     <!-- Title text for the empty view -->
-    <string name="empty_view_title_text">It\'s a bit lonely here...</string>
+    <string name="empty_view_title_text">There\'s currently no items in the database!</string>
 
     <!-- Subtitle text for the empty view that prompts the user to add an item  -->
     <string name="empty_view_subtitle_text">Get started by adding inventory</string>
@@ -35,7 +35,7 @@
     <string name="action_delete">Delete</string>
 
     <!-- Toast message in editor when new entry has been successfully inserted  -->
-    <string name="editor_insert_item_successful">Entry saved</string>
+    <string name="editor_insert_item_successful">Entry saved!</string>
 
     <!-- Toast message in editor when new entry has failed to be inserted -->
     <string name="editor_insert_item_failed">Error with saving entry</string>
@@ -87,5 +87,14 @@
 
     <!-- Text hint for supplier phone number field in the editor -->
     <string name="hint_supplier_phone">Supplier Phone Number</string>
+
+    <!-- Text for Sell button -->
+    <string name="sell_button">SELL</string>
+
+    <!-- Increase quantity button -->
+    <string name="quantity_increase_button">+</string>
+
+    <!-- Decrease quantity button -->
+    <string name="quantity_decrease_button">-</string>
 
 </resources>
