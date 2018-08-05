@@ -97,4 +97,7 @@
     <!-- Decrease quantity button -->
     <string name="quantity_decrease_button">-</string>
 
+    <!-- Toast to display when rying to decrease quantity/sell when quantity is already 0 -->
+    <string name="quantity_zero_message">Cannot reduce quantity further</string>
+
 </resources>
