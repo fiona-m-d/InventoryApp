@@ -18,21 +18,21 @@ public class InventoryDbHelper extends SQLiteOpenHelper {
     //database version (NOTE: need to increase the version if/when the schema changes)
     private static final int DATABASE_VERSION = 1;
 
-    public InventoryDbHelper (Context context){
+    public InventoryDbHelper(Context context) {
         //call parent constructor (as we're subclassing from another class)
-        super (context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         //CREATE TABLE inventory
         //Create a String that contains the text for the SQL statement to create the table
-        String SQL_CREATE_INVENTORY_TABLE =  "CREATE TABLE " + InventoryEntry.TABLE_NAME + " ("
+        String SQL_CREATE_INVENTORY_TABLE = "CREATE TABLE " + InventoryEntry.TABLE_NAME + " ("
                 + InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + InventoryEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, "
                 + InventoryEntry.COLUMN_PRODUCT_PRICE + " DOUBLE NOT NULL, "
                 + InventoryEntry.COLUMN_PRODUCT_QUANTITY + " INTEGER NOT NULL, "
-                + InventoryEntry.COLUMN_PRODUCT_SUPPLIER + " TEXT NOT NULL "
+                + InventoryEntry.COLUMN_PRODUCT_SUPPLIER + " TEXT NOT NULL, "
                 + InventoryEntry.COLUMN_SUPPLIER_PHONENUMBER + " TEXT NOT NULL);";
 
         //now call method to actually create the table
